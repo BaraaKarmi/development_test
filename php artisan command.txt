@@ -1,0 +1,18 @@
+php artisan make:model User -mc
+php artisan make:model Product -mc
+php artisan make:model Order -mc
+php artisan make:model Payement -mc
+
+php artisan make:migration create_order_product_table --create=order_product
+
+php artisan migrate  
+                                                                   
+php artisan make:seed UserSeeder
+php artisan make:seed OrderSeeder
+php artisan make:seed ProductSeeder
+php artisan make:seed PayementSeeder
+php artisan db:seed
+
+php artisan make:request OrderRequest
+php artisan make:request UserRequest
+php artisan make:request LoginRequest
